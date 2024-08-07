@@ -88,10 +88,10 @@ main {
 
 #welcome {
     text-align: center;
-    font-size: 80px;
+    font-size: 100px;
     background-color: #28dfd000;
     font-family: "Dancing Script", cursive;
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 .music-player, .video-player {
@@ -173,5 +173,9 @@ footer {
     form input, form textarea, form button {
         font-size: 1em;
         padding: 8px;
+    }
+
+    #welcome {
+        font-size: 56px;
     }
 }
