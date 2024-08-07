@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony of Soul</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/logo.jpg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital@0;1&family=Timmana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital@0;1&family=Timmana&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="logo-container">
+                <img src="img/logo.jpg" alt="Harmony of Soul Logo" class="logo">
+                <h1>Harmony of Soul</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('about')">About</a></li>
+                    <li><a href="#" onclick="showSection('music')">Music</a></li>
+                    <li><a href="#" onclick="showSection('Our Plans')">Our Plans</a></li>
+                    <li><a href="#" onclick="showSection('History')">History</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav> <!--Nav buttons-->
+
+        </header>
+
+        <main>
+
+            <section id = "welcome" class = "section">Welcome!</section>
+
+            <section id="about" class="section"> <!--About Us-->
+                
+                <p id = "about">Welcome to the official site of Harmony of Soul</p>
+                <p id = "about">We are a band that praise our God</p>
+                <p id = "about">Our home is Zhytomyr</p>
+                <p id = "about">We believe in Jesus Christ, the LORD and CREATOR of our world</p>
+                <p id = "about">Our sinphobia is not enough!</p>
+            </section>
+
+            <section id="music" class="section"> <!--song list-->
+
+                <h2>Our Music</h2>
+
+                <ul id="song-list">
+                    
+                    <li>
+                        <span>Не цілуй Христа</span> <br>
+                        <span>(сл. і муз. К. Ліхачова)</span> <br>
+                        <button onclick="playMedia('neTsiluyKhrysta.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('neTsiluyKhrysta.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Не цілуй Христа-->
+                    
+                    <li> 
+                        <span id = "songName">Бо Ти - Бог мій, моя надія </span> <br>
+                        <span>(Сл. та муз. Н. Мороз, аранж. І. Лях)</span> <br>
+                        <button onclick="playMedia('boTyBohMiy.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('boTyBohMiy.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Бо Ти - Бог мій-->
+
+                    <li>
+                        <span>Я люблю Божий дім</span> <br>
+                        <span>(Сл. та муз. гурт "Левит")</span> <br>
+                        <button onclick="playMedia('yaLyublyuBozhyyDim.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('yaLyublyuBozhyyDim.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Я люблю Божий дім-->
+
+                    <li>
+                        <span>Родився нам</span> <br>
+                        <span>(пер. Л. Стависька, IXTIS_BAND (feat. H.Worship))</span> <br>
+                        <button onclick="playMedia('rodyvsyaNam.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('rodyvsyaNam.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Родився нам-->
+
+                    <li>
+                        <span>При дорозі лілія цвіла</span> <br>
+                        <button onclick="playMedia('pryDorozi.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('pryDorozi.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--При дорозі лілія цвіла-->
+
+                    <li>
+                        <span>Одного дня</span> <br>
+                        <span>(Matt Redman - One day (cover))</span> <br>
+                        <button onclick="playMedia('odnohoDnya.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('odnohoDnya.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Одного дня-->
+
+                    <li>
+                        <span>Я в світі цьому мандрівник</span> <br>
+                        <span>(сл. Л. Васєніна, фон. П. Писларь, пер. Harmony of Soul)</span> <br>
+                        <button onclick="playMedia('yaVSvitiTsiomyMandrivnyk.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('yaVSvitiTsiomyMandrivnyk.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Я в світі цьому мандрівник-->
+
+                    <li>
+                        <span>Колись давно в Єрусалимі</span> <br>
+                        <button onclick="playMedia('kolysDavnoVYerusalymi.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('kolysDavnoVYerusalymi.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Колись давно в Єрусалимі-->
+
+                    <li>
+                        <span>Такий великий Бог</span> <br>
+                        <span>(сл. і муз. Я. Вислоцька)</span> <br>
+                        <button onclick="playMedia('takyyVelykyyBoh.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('takyyVelykyyBoh.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Такий великий Бог-->
+
+                    <li>
+                        <span>А небо кричить</span> <br>
+                        <span>(сл. Н. Шевченко, пер. Harmony of Soul)</span> <br>
+                        <button onclick="playMedia('aNeboKrychyt.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('aNeboKrychyt.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--А небо кричить-->
+
+                    <li>
+                        <span>Паси овець Моїх</span> <br>
+                        <span>(сл. і муз. А. Соколовська)</span> <br>
+                        <button onclick="playMedia('pasyOvetsMoyikh.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('pasyOvetsMoyikh.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Паси овець Моїх-->
+
+                    <li>
+                        <span>Ти в руках Моїх</span> <br>
+                        <span>(пер. Harmony of Soul (Moses Strijaous cover))</span> <br>
+                        <button onclick="playMedia('tyVRukakhMoyikh.mp4', 'video', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="red"/>
+                            </svg>
+                        </button>
+                        <button onclick="playMedia('tyVRukakhMoyikh.mp3', 'audio', this)">
+                            <svg viewBox="0 0 24 24" width="28" height="24">
+                                <polygon points="5,3 19,12 5,21" fill="gray"/>
+                            </svg>
+                        </button>
+                        <div class="media-player hidden">
+                            <video controls>
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="media-player hidden">
+                            <audio controls>
+                                <source src="" type="audio/mp3">
+                                Your browser does not support the audio tag.
+                            </audio>
+                        </div>
+                    </li> <!--Ти в руках Моїх-->
+                    
+                </ul>
+            </section>
+
+            <section id="History" class="section">
+                <h2>History</h2>
+
+                <p id = "about">We have started our music career at September 2019 in Vinnytsya</p>
+
+                <ul>
+                    <li>August 4, 2024 - Home, -</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Home, ?</li>
+                    <li>August 25, 2024 - Home, ?</li>
+                    <li>September 1, 2024 - Home, ?</li>
+                    <li>September 8, 2024 - Home, ?</li>
+                    <li>September 15, 2024 - Home, ?</li>
+                </ul>
+            </section> <!--History-->
+
+            <section id="Our Plans" class="section">
+                <h2>Our Plans</h2>
+                <ul>
+                    <li>August 11, 2024 - Home, ?</li>
+                    <li>August 18, 2024 - Liverpool, ?</li>
+                    <li>August 25, 2024 - New York, ?</li>
+                    <li>September 1, 2024 - Amsterdam, ?</li>
+                    <li>September 8, 2024 - Kyiv, ?</li>
+                    <li>September 15, 2024 - Beijing, ?</li>
+                </ul>
+            </section> <!--Our Plans-->
+
+            <section id="contact" class="section"> <!--Our contacts-->
+                <h2>Our Contacts</h2>
+
+                <ul>
+                    <li>
+                        <a href="http://www.youtube.com/@harmonyofsoulband" class = "contact-link">YouTube</a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/h.armony.of.soul/" class = "contact-link">Instagram</a>
+                    </li>
+                    <li>
+                        <p id = "phoneNumber" class = "clickable-text">Mobile number</p>
+                    </li>
+                    <li>
+                        <p id = "adress" class = "clickable-text">Semiour adress</p>
+                    </li>
+                </ul>
+
+            </section>
+
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 <b>Harmony of Soul</b>. All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
