@@ -34,6 +34,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
+    cursor: default;
 }
 
 .logo {
@@ -41,7 +43,6 @@ header {
     height: 70px;
     margin-right: 10px;
     border-radius: 100%;
-    user-select: none;
 }
 
 header h1 {
@@ -50,8 +51,6 @@ header h1 {
     font-family: "Dancing Script", cursive;
     font-weight: 400;
     font-style: normal;
-    user-select: none;
-    cursor: default;
 }
 
 nav ul {
@@ -91,10 +90,12 @@ main {
 
 #welcome {
     text-align: center;
-    font-size: 100px;
+    font-size: 80px;
     background-color: #28dfd000;
     font-family: "Dancing Script", cursive;
-    margin-top: 130px;
+    margin-top: 150px;
+    user-select: none;
+    cursor: default;
 }
 
 .music-player, .video-player {
@@ -130,14 +131,14 @@ video {
     line-height: 10px;
 }
 
-#History ul li {
-    font-size: 18px;
-}
-
 button {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 20px;
+}
+
+#History ul li {
+    font-size: 18px;
 }
 
 footer {
@@ -180,9 +181,5 @@ footer {
     form input, form textarea, form button {
         font-size: 1em;
         padding: 8px;
-    }
-
-    #welcome {
-        font-size: 56px;
     }
 }
