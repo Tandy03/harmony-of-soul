@@ -127,6 +127,10 @@ video {
     line-height: 10px;
 }
 
+#History ul li {
+    font-size: 18px;
+}
+
 button {
     margin-top: 20px;
     margin-bottom: 20px;
