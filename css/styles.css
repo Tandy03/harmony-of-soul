@@ -41,6 +41,7 @@ header {
     height: 70px;
     margin-right: 10px;
     border-radius: 100%;
+    user-select: none;
 }
 
 header h1 {
@@ -49,6 +50,8 @@ header h1 {
     font-family: "Dancing Script", cursive;
     font-weight: 400;
     font-style: normal;
+    user-select: none;
+    cursor: default;
 }
 
 nav ul {
