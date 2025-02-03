@@ -4,6 +4,13 @@
     font-family: "Timmana", sans-serif;
     font-weight: 200;
     font-style: normal;
+}
+
+.caveat-regular {
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
   }
 
 body {
@@ -68,7 +75,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #a4ddf3;
+    color: #ffce27;
     text-decoration: none;
     font-weight: 600;
 }
@@ -78,10 +85,12 @@ main {
 }
 
 #about {
-    font-family: "Timmana", sans-serif;
-    font-weight: 200;
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     font-style: normal;
-    font-size: x-large;
+    font-size: 30px;
+    line-height: 12px;
 }
 
 .section {
@@ -150,6 +159,14 @@ button {
     font-size: 18px;
 }
 
+#repertoire ul {
+    margin-left: -60px;
+}
+
+#repertoire ul ul {
+    margin-left: 0px;
+}
+
 footer {
     text-align: center;
 }
@@ -166,6 +183,11 @@ footer {
 
 /* Адаптивність */
 @media (max-width: 768px) {
+
+    #about {
+        line-height: 28px;
+    }
+
     nav ul li {
         display: block;
         margin: 10px 0;
