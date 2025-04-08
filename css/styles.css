@@ -93,6 +93,15 @@ main {
     line-height: 12px;
 }
 
+.about {
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 12px;
+}
+
 .section {
     display: none;
     padding: 20px;
@@ -164,7 +173,7 @@ button {
 }
 
 #repertoire ul ul {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 footer {
