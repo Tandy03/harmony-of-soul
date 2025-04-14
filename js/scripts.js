@@ -1,27 +1,3 @@
-/*document.addEventListener('DOMContentLoaded', function() {
-    showSection('about');
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (name && email && message) {
-            alert(`Thank you, ${name}! Your message has been sent.`);
-            document.getElementById('contact-form').reset();
-        } else {
-            alert('Please fill in all fields.');
-        }
-    });
-
-    document.getElementById('clickable-text').addEventListener('click', function() {
-        alert('+38098*******');
-    });
-});*/
-
-
 document.getElementById('phoneNumber').addEventListener('click', function() {
     alert('+3809800220**');
 });
@@ -64,11 +40,11 @@ function playMedia(fileName, type, buttonElement) {
             if (event.key === 'f' || event.key === 'F' || event.key === 'а' || event.key === 'А') {
                 if (videoElement.requestFullscreen) {
                     videoElement.requestFullscreen();
-                } else if (videoElement.mozRequestFullScreen) { // Firefox
+                } else if (videoElement.mozRequestFullScreen) {
                     videoElement.mozRequestFullScreen();
-                } else if (videoElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                } else if (videoElement.webkitRequestFullscreen) {
                     videoElement.webkitRequestFullscreen();
-                } else if (videoElement.msRequestFullscreen) { // IE/Edge
+                } else if (videoElement.msRequestFullscreen) {
                     videoElement.msRequestFullscreen();
                 }
             }
@@ -82,7 +58,6 @@ function playMedia(fileName, type, buttonElement) {
         `;
     }
 
-    // Сховати плеєри
     document.querySelectorAll('.media-player').forEach(mp => {
         if (mp !== mediaPlayer) {
             mp.classList.add('hidden');
