@@ -8,15 +8,9 @@ document.getElementById('adress').addEventListener('click', function() {
 
 document.getElementById('welcome').style.display = 'block';
 
-google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawBasic);
+window.addEventListener('load', function () {
 
-function drawBasic() {
-    let data = new google.visualization.DataTable();
-    data.addColumn('date', 'День');
-    data.addColumn('number', 'Кількість людей');
-
-    data.addRows([
+    const rawData = [
         [new Date(2023, 3, 16), 115],
         [new Date(2023, 3, 23), 92],
         [new Date(2023, 3, 30), 107],
@@ -108,46 +102,69 @@ function drawBasic() {
         [new Date(2025, 2, 30), 117],
         [new Date(2025, 3, 6), 94],
         [new Date(2025, 3, 13), 126]
-    ]);
-    
-    let sum = 0;
-    let count = 0;
-    for (let i = 0; i < data.getNumberOfRows(); i++) {
-        sum += data.getValue(i, 1);
-        count++;
-    }
-    let average = sum / count;
+    ];
 
-    document.getElementById('average').innerHTML = `Середнє арифметичне: ${average.toFixed(0)} людей на ранковому в неділю.`;
+    const chartData = rawData.map(([date, value]) => ({
+        x: date,
+        y: value
+    }));
 
-    let options = {
-        hAxis: {
-            title: 'Дата',
-            format: 'dd.MM.yy',
-            ticks: [
-                new Date(2023, 3, 16),
-                new Date(2023, 8, 1),
-                new Date(2024, 0, 1),
-                new Date(2024, 5, 1),
-                new Date(2025, 0, 1)
-            ]
+    const average = rawData.reduce((sum, [, val]) => sum + val, 0) / rawData.length;
+    document.getElementById("average").innerText = `Середнє арифметичне: ${average.toFixed(0)} людей на ранковому в неділю.`;
+
+    const config = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Кількість людей',
+                data: chartData,
+                fill: false,
+                borderColor: '#aa8606',
+                tension: 0.1
+            }]
         },
-        vAxis: {
-            title: 'Кількість людей',
-            ticks: [80, 90, 100, 110, 120, 130]
-        },
-        legend: { position: 'none' },
-        series: {
-            0: { color: 'green' }
-        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'month',
+                        tooltipFormat: 'dd.MM.yyyy',
+                        displayFormats: {
+                            month: 'MMM yyyy',
+                            day: 'dd.MM'
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Дата'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Кількість людей'
+                    },
+                    suggestedMin: 80,
+                    suggestedMax: 130,
+                    ticks: {
+                        stepSize: 10
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
     };
 
-    let chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, config);
+});
 
-    let layout = chart.getChartLayoutInterface();
-    let chartArea = layout.getChartAreaBoundingBox();
-}
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
